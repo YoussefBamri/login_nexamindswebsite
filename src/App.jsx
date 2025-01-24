@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+import Navbar from './assets/Navbar/navbar.jsx';
+import LeftSide from './assets/left-side/Left-side.jsx'; 
+import RightSide from './assets/right-side/right-side.jsx';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div >
-        <a href="https://vite.dev" target="_blank ">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" >
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div> 
-      <h1 className="bg-red-100 text-orange-600">bienvenue </h1>
-      <div className="card bg-orange-600 w-200">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-           click <code> count</code> pour pouvoir compter
-        </p>
+    
+    <div className="gap-20 lg:px-20 py-7 font-poppins-serif space-y-14">
+      <Navbar />
+      <div className="flex justify-between gap-6 items-center">
+        <LeftSide />
+        <RightSide />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more   
-      </p>
-    </>
-  )
+   </div> </> 
+  );
 }
 
-export default App
+export default App;
