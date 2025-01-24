@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-
-
 //nsobhom b yarn yarn add @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
 
 const Input = ({ placeholder, className, type = 'text' }) => {

@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      colors: {
+        orangeDark: "#E65125", // Dark orange (code couleur)
+      },
     },
   },
   plugins: [],
