@@ -2,29 +2,35 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
-const Input = ({ label, className,placeholder, type = "text" }) => {
-    const [password, setpassword] = useState(false);
 
-    const visibilte = () => {
-        setpassword(!password);
+
+//nsobhom b yarn yarn add @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+
+const Input = ({ placeholder, className, type = 'text' }) => {
+    const [inputType, setInputType] = useState(type); // jebet type bch narfou password wala text
+    const [visible, setVisible] = useState(false); //hne nchoufou ken visible wala le yani utilisateur amal clique al eye wala le ken clique yodher ken awed cloque okhra generalement bch ytmaskaa
+
+    const togglePasswordVisibility = () => { //hedhi copier m google 
+        setVisible(!visible); //par defaut yekhou etat non visible
+        setInputType(inputType === 'password' ? 'text' : 'password'); //etat te3 input yekhdhou bch ymanipuli bih 
     };
 
     return (
-        <div className="relative">
+        <div className="relative ">
             <input
-                type={password ? "text" : type}
+                type={inputType}
+                className={`border border-gray-300 rounded-full bg-white py-3 w-full ${className}`}
                 placeholder={placeholder}
-               className={`max-w-md h-[48px] border border-gray-300 rounded-full p-4 bg-white w-full ${className}`}
-
-            />
-            {type === "password" && (
-                <span
-                    onClick={visibilte}
-                        className="absolute inset-y-0 right-0 pr-3 flex items-center cursor-pointer"
+            /> 
+            {type === 'password' && ( //si password
+                <span //affichage te3 eye 
+                    className="absolute right-5 top-1/2 transform -translate-y-1/2 cursor-pointer"
+                    onClick={togglePasswordVisibility} //hne manipulation mte3 foncion elle affiche leye tant que houa password 
+                    //houa par defaut eye faslach yani mchatbaa star jey bch twali visible leye ttbadel mch mchatba
                 >
-                    <FontAwesomeIcon icon={password ? faEyeSlash : faEye} />
+                    <FontAwesomeIcon icon={visible ? faEyeSlash : faEye} />
                 </span>
-            )}
+            )} 
         </div>
     );
 };
