@@ -2,8 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './assets/Navbar/navbar.jsx';
 import LeftSide from './assets/left-side/Left-side.jsx'; 
-import RightSide from './assets/right-side/right-side.jsx';
-
+import RightSide from './assets/right-side/Right-side';
 function App() {
   const [count, setCount] = useState(0);
 
