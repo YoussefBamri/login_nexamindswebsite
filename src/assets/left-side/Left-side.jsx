@@ -1,13 +1,11 @@
 import React from 'react';
-import RightSide from '../right-side/Right-side';
-
 const LeftSide = () => {
   return (
       <div className="grid w-full ">
-        <div className=" flex flex-col justify-center gap-y-6 text-center lg:items-start lg:justify-start lg:text-left min-h-[500px]">
+        <div className=" flex flex-col justify-center gap-y-6 text-center lg:items-start lg:justify-start lg:text-left min-h-full">
           <h1 className="text-4xl font-medium text-black">
-            <span className="text-[36px] text-4xl">Interested in Working with</span>
-            <span className="block text-orangeDark text-[36px] tracking-wide">Leading Companies?</span>
+            <span className="text-[36px] text-4xl">Interested in working with</span>
+            <span className="block text-orangeDark text-[36px] font-bold">Leading companies?</span>
           </h1>
           <p className="text-gray-500 max-w-xl ">
             Nexaminds is actively recruiting top-tier talents dedicated to making an impact. Join our global team for diverse projects, flexible work, competitive pay, and strong work-life balance. Discover roles matching your skills and ambitions with our job openings.

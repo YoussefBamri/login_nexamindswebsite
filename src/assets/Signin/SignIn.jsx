@@ -3,7 +3,7 @@ import Input from '../input/input';
 
 const SignIn = ({ setIsSignIn }) => {
     return (
-        <div className="w-full max-w-[497px] min-h-[500px] ">
+        <div className="w-full max-w-[497px] min-h-full ">
             <div className="mx-8">
                 <h1 className="text-2xl mt-3 font-medium font-poppins">
                     Login as <span className=" text-orangeDark">Talent</span>
@@ -23,13 +23,13 @@ const SignIn = ({ setIsSignIn }) => {
                 <div className="flex flex-col gap-y-4">
                     <Input 
                         label="Email" 
-                        placeholder="Enter your email" 
+                        placeholder="email" 
                         className="w-full text-gray-700 placeholder-gray-500 px-4 py-3 text-[14px] font-poppins" 
                     />
                     <Input 
                         label="Password" 
                         type="password" 
-                        placeholder="Enter your password" 
+                        placeholder="password" 
                         className="w-full text-gray-700 placeholder-gray-500 px-4 py-3 text-[14px] font-poppins" 
                     />
                 </div>
