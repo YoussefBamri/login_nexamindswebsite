@@ -1,69 +1,47 @@
 import React, { useState } from 'react';
 import Input from '../input/input';
-import SignIn from '../Signin/SignIn.tsx';
+import SignIn from '../Signin/SignIn';
+
 const RightSide = () => {
     const [isSignIn, setIsSignIn] = useState(false);
 
     return (
-        <div className=" p-[50px] bg-white shadow-2xl rounded-3xl max-w-[497px] mb-[100px] mt-0">
+        <div className="w-full max-w-lg sm:max-w-md md:max-w-lg lg:max-w-xl min-h-[500px] rounded-3xl px-6 pb-7 pt-10 shadow-2xl mx-auto">
             {isSignIn ? (
                 <SignIn setIsSignIn={setIsSignIn} />
             ) : (
-                <>
-                    <h1 className="text-2xl mx-4 mt-3 font-medium font-poppins">
-                        Sign up now as <span className="text-orange-600">Talent</span>
+                <div className="mx-4 sm:mx-6">
+                    <h1 className="text-2xl sm:text-3xl mt-3 font-medium">
+                        Sign up now as <span className="text-orangeDark">Talent</span>
                     </h1>
-                    <p className="mb-6 mx-4 mt-3 text-gray-500 font-poppins">
-                        Already have an account? 
+                    <p className="mb-6 mt-3 text-gray-500 font-poppins text-center sm:text-left">
+                        Already have an account?{' '}
                         <span>
                             <a
-                                className="text-orange-600 cursor-pointer font-medium font-poppins"
+                                className="text-orangeDark cursor-pointer font-medium"
                                 onClick={() => setIsSignIn(true)}
-                            > Sign in</a>
+                            >
+                                Sign in
+                            </a>
                         </span>
                     </p>
 
-                    <div className="space-y-4 flex-col">
-                        <div className="flex gap-x-4">
-                            <Input 
-                                label="First name" 
-                                placeholder="First name" 
-                                className="w-[184.8px] h-[48px] text-gray-700 placeholder-gray-500 px-[16px] py-[24px] text-[14px] font-poppins" 
-                            />
-                            <Input 
-                                label="Last name" 
-                                placeholder="Last name" 
-                                className=" w-[184.8px] h-[48px] w-full text-gray-700 placeholder-gray-500 px-4 py-3 text-[14px] font-poppins" 
-                            />
+                    <div className="flex flex-col gap-y-4">
+                        <div className="flex flex-col sm:flex-row gap-4">
+                            <Input label="First name" placeholder="First name" className="w-full" />
+                            <Input label="Last name" placeholder="Last name" className="w-full" />
                         </div>
-                        <div className="space-y-4">
-                            <Input 
-                                type="email" 
-                                label="Email" 
-                                placeholder="Enter your email" 
-                                className=" w-[385px] h-[48px]  w-full text-gray-700 placeholder-gray-500 px-[8px] py-[24px] text-[14px] font-poppins" 
-                            />
-                            <Input 
-                                label="Password" 
-                                type="password" 
-                                placeholder="Enter your password" 
-                                className=" w-[385px] h-[48px] w-full text-gray-700 placeholder-gray-500  px-4 py-3 text-[14px] font-poppins" 
-                            />
-                            <Input 
-                                label="Confirm Password" 
-                                type="password" 
-                                placeholder="Confirm your password" 
-                                className=" w-[385px] h-[48px] w-full text-gray-700 placeholder-gray-500 px-4 py-3 text-[14px] font-poppins" 
-                            />
-                        </div>
+                        <Input type="email" label="Email" placeholder="Email" className="w-full" />
+                        <Input label="Password" type="password" placeholder="Password" className="w-full" />
+                        <Input label="Confirm password" type="password" placeholder="Confirm password" className="w-full" />
                     </div>
 
                     <div className="flex justify-center">
-                        <button className="mt-8 bg-orange-600 text-white py-3 px-16 rounded-full hover:bg-orange-700 transition font-medium">
+                        <button className="mt-5 w-full max-w-xs bg-orangeDark text-sm p-4 text-white rounded-full hover:bg-orange-700 transition font-medium">
                             Sign up
                         </button>
                     </div>
-                </>
+                </div>
             )}
         </div>
     );
