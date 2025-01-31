@@ -16,7 +16,7 @@ const Input = forwardRef(({ placeholder, className, type = 'text', ...rest }, re
         <div className="relative">
             <input
                 type={inputType}
-                className={`border border-gray-300 rounded-full bg-white py-3 w-full ${className}`}
+                className={`mb-3 h-[48px] w-full max-w-md rounded-full border border-solid border-gray-300 px-6 w-full max-w-md rounded-full border border-solid border-gray-300  ${className}`}
                 placeholder={placeholder}
                 ref={ref} // Passer la ref ici
                 {...rest}
